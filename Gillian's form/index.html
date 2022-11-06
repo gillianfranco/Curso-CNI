@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulário</title>
+</head>
+<body>
+    <!-- Campo esquerdo da página -->
+    <div id="title-place">
+        <h1 id="title">Formulário</h1>
+        <p id="subtitle">Formulário html e css.</p>
+    </div>
+
+    <!-- Campo direito da página -->
+    <div id="form-place">
+        <form>
+            <!-- Título -->
+            <header id="form__header">
+                <h1 id="form__title">Cadastro</h1>
+            </header>
+
+            <!-- Campos do formulário -->
+            <section id="form__section">
+                <main id="form__divs">
+                    <!-- Nome e Sobrenome -->
+                    <fieldset id="form__fieldset-name">
+                        <div class="form__div">
+                            <input type="text" class="form__input" placeholder=" " name="name" required>
+                            <label for="name" class="form__label">Nome</label>
+                        </div>
+                        <div class="form__div">
+                            <input type="text" class="form__input" placeholder=" " name="surname" required>
+                            <label for="surname" class="form__label">Sobrenome</label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Telefone -->
+                    <div class="form__div">
+                        <input type="tel" class="form__input" placeholder=" " name="phone" required>
+                        <label for="phone" class="form__label">Telefone</label>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form__div">
+                        <input type="email" class="form__input" placeholder=" " name="email" required>
+                        <label for="email" class="form__label">Email</label>
+                    </div>
+
+                    <!-- Endereço -->
+                    <div class="form__div">
+                        <input type="text" class="form__input" placeholder=" " name="address" required>
+                        <label for="address" class="form__label">Endereço</label>
+                    </div>
+                </main>
+            </section>
+
+            <!-- Botões -->
+            <footer id="form__footer">
+                <!-- Botão de limpar os campos -->
+                <button type="reset" class="form__button">Limpar</button>
+
+                <!-- Botão de cadastrar -->
+                <button type="submit" class="form__button">Cadastrar</button>
+            </footer>
+
+        </form>
+    </div>
+</body>
+</html>
