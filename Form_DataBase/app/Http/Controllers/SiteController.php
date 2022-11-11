@@ -15,6 +15,7 @@ class SiteController extends Controller
     // Coleta os dados e armazena no banco de dados
     public function getData(Request $request){
         $data = $request->except('_token');
+        
         Dado::create($data); 
 
         return redirect('/');

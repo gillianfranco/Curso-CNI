@@ -17,7 +17,7 @@
 
     <!-- Campo direito da página -->
     <div id="form-place">
-        <form>
+        <form method="post" action="{{ route('SiteController.getData') }}">
             @csrf
             <!-- Título -->
             <header id="form__header">
@@ -62,7 +62,7 @@
             <!-- Botões -->
             <footer id="form__footer">
                 <!-- Botão de cadastrar -->
-                <button type="button" class="form__button"><a href="{{ route('SiteController.getData') }}">Cadastrar</a></button>
+                <button type="submit" class="form__button">Cadastrar</button>
 
                 <!-- Botão de limpar os campos -->
                 <button type="reset" class="form__button">Limpar</button>
