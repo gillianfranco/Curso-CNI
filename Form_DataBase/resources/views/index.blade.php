@@ -30,31 +30,31 @@
                     <!-- Nome e Sobrenome -->
                     <fieldset id="form__fieldset-name">
                         <div class="form__div">
-                            <input type="text" class="form__input" placeholder=" " name="name" required>
-                            <label for="name" class="form__label" name="nome">Nome</label>
+                            <input type="text" class="form__input" placeholder=" " name="name" id="name" required>
+                            <label for="name" class="form__label">Nome</label>
                         </div>
                         <div class="form__div">
-                            <input type="text" class="form__input" placeholder=" " name="surname" required>
-                            <label for="surname" class="form__label" name="sobrenome">Sobrenome</label>
+                            <input type="text" class="form__input" placeholder=" " name="surname" id="surname" required>
+                            <label for="surname" class="form__label">Sobrenome</label>
                         </div>
                     </fieldset>
 
                     <!-- Telefone -->
                     <div class="form__div">
-                        <input type="tel" class="form__input" placeholder=" " name="phone" required>
-                        <label for="phone" class="form__label" name="telefone">Telefone</label>
+                        <input type="tel" class="form__input" placeholder=" " name="phone" id="phone" required>
+                        <label for="phone" class="form__label">Telefone</label>
                     </div>
 
                     <!-- Email -->
                     <div class="form__div">
-                        <input type="email" class="form__input" placeholder=" " name="email" required>
-                        <label for="email" class="form__label" name="email">Email</label>
+                        <input type="email" class="form__input" placeholder=" " name="email" id="email" required>
+                        <label for="email" class="form__label">Email</label>
                     </div>
 
                     <!-- Endereço -->
                     <div class="form__div">
-                        <input type="text" class="form__input" placeholder=" " name="address" required>
-                        <label for="address" class="form__label" name="endereco">Endereço</label>
+                        <input type="text" class="form__input" placeholder=" " name="address" id="address" required>
+                        <label for="address" class="form__label">Endereço</label>
                     </div>
                 </main>
             </section>
@@ -62,7 +62,7 @@
             <!-- Botões -->
             <footer id="form__footer">
                 <!-- Botão de cadastrar -->
-                <button type="button" class="form__button"><a href="{{ route('SiteController.coleta') }}">Cadastrar</a></button>
+                <button type="button" class="form__button"><a href="{{ route('SiteController.getData') }}">Cadastrar</a></button>
 
                 <!-- Botão de limpar os campos -->
                 <button type="reset" class="form__button">Limpar</button>
