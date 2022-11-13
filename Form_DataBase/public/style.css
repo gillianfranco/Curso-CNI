@@ -186,3 +186,24 @@ fieldset .form__div:nth-child(2){
     box-shadow: 2px 2px 2px rgba(0, 0,0, 0.2);
     background-color: rgb(228, 1, 1);
 }
+
+@media only screen and (max-width: 990px){
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #title-place{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+        width: 70%;
+    }
+
+    #form-place{
+        width: 70%;
+    }
+}
