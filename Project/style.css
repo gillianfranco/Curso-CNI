@@ -12,9 +12,10 @@ body{
 	flex-direction: row;
 	justify-content: space-evenly;
 	align-items: center;
+	background: #1c1c1c;
 }
 
-.container, .box, .text{
+[class*="container-"], [class*="box-"], [class*="text-"]{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -22,20 +23,177 @@ body{
 	text-align: center;
 }
 
-.container{
-	width: 260px;
-	height: 300px;
-	border: 1px solid #000;
+
+/* ------------------------------------------- Linhas -------------------------------------------------- */
+div.field{
+	width: 250px;
+	height: 250px;
+	position: relative;
 }
 
-.box{
-	border: 1px solid #000;
+div.field span{
+	position: absolute;
+	display: block;
+	transition: 0.5s;
+}
+
+/* Linha Topo */
+div.field [class*="top-"]{
+	top: -8px;
+	left: 25px;
+	width: 200px;
+	height: 2px;
+	transform: rotate(15deg);
+}
+
+div.field:hover [class*="top-"]{
+	transform: rotate(0deg);
+}
+
+/* Linha Direita */
+div.field [class*="right-"]{
+	top: 25px;
+	left: 258px;
+	width: 2px;
+	height: 200px;
+	transform: rotate(165deg);
+}
+
+div.field:hover [class*="right-"]{
+	transform: rotate(180deg);
+}
+
+/* Linha Baixo */
+div.field [class*="bottom-"]{
+	top: 258px;
+	left: 25px;
+	width: 200px;
+	height: 2px;
+	transform: rotate(15deg);
+}
+
+div.field:hover [class*="bottom-"]{
+	transform: rotate(0deg);
+}
+
+/* Linha Esquerda */
+div.field [class*="left-"]{
+	top:25px;
+	left: -8px;
+	width: 2px;
+	height: 200px;
+	transform: rotate(165deg);
+}
+
+div.field:hover [class*="left-"]{
+	transform: rotate(180deg);
+}
+
+/* ----------------------------------------- Campos ----------------------------------------- */
+[class*="container-"]{
+	width: 250px;
+	height: 250px;
+	position: absolute;
+	background: #363637;
+	color: #363637;
+}
+
+/* Texto */
+.text{
+	margin: 15px 0 15px 0;
+	color: #eee;
+}
+
+.text p{
+	font-size: 15px;
+	margin-top: 3px;
+}
+
+[class*="container-"]:hover .text{
+	color: #363637;
+}
+
+/* Box */
+[class*="box-"]{
 	width: 70px;
 	height: 70px;
 }
 
-.text{
-	margin: 15px 0 20px 0;
+[class*="container-"]:hover [class*="box-"]{
+	border:1px solid #1c1c1c;
+}
+
+/* Botão */
+[class*="button"]{
+	width: 100px;
+	height: 25px;
+}
+
+[class*="button"] a{
+	text-decoration: none;
+	font-size: 15px;
+	color: #1c1c1c;
+}
+
+/* ------------------------------- Campo 1 -----------------------*/
+div.container-1:hover{
+	background-color: rgb(52, 255, 96);
+}
+
+/* Box */
+div.box-1{
+	border: 1px solid rgb(52, 255, 96);
+}
+
+/* Botão */
+.button-1{
+	background: rgb(52, 255, 96);
+}
+
+div.container-1:hover .button-1{
+	background: #363637;
+}
+
+div.container-1:hover .button-1 a{
+	color: rgb(52, 255, 96);
+}
+
+/* Linhas */
+span.top-1, span.right-1, span.bottom-1, span.left-1{
+	background: rgb(52, 255, 96);
 }
 
 
+
+
+
+/* ------------------------------- Campo 2 -----------------------*/
+/* Box */
+div.box-2{
+	border: 1px solid rgb(255, 52, 245);
+}
+
+div.container:hover div.box-2{
+	border: 1px solid #1c1c1c;
+}
+
+/* ------------------------------- Campo 3 -----------------------*/
+/* Box */
+div.box-3{
+	border: 1px solid rgb(62, 98, 255);
+}
+
+div.container:hover div.box-3{
+	border: 1px solid #1c1c1c;
+}
+
+
+
+
+
+
+
+
+/* Colocar transition antes da animação. Diminuir o tamanho da letra do texto. Terminar de fazer os outros. Prestar atenção nas cores. Revisar o código e refletir se ele pode ser diminuido ou mais limpo. */
+
+/* -------------------------------------------------------------------------------------------------- */
