@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [SiteController::class, 'category_view'])->name('SiteController.category_view');
+Route::post('/', [SiteController::class, 'prod_register'])->name('SiteController.prod_register');
+Route::get('/category', [SiteController::class, 'category'])->name('SiteController.category');
+
