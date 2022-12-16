@@ -16,5 +16,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [SiteController::class, 'category_view'])->name('SiteController.category_view');
 Route::post('/', [SiteController::class, 'prod_register'])->name('SiteController.prod_register');
-Route::get('/category', [SiteController::class, 'category'])->name('SiteController.category');
 
+
+Route::get('/category', [SiteController::class, 'category'])->name('SiteController.category');
+Route::post('/category', [SiteController::class, 'category_register'])->name('SiteController.category_register');
+
+Route::get('/prod', [SiteController::class, 'prod_view'])->name('SiteController.prod_view'); 
+
+Route::get('produtos/{id}', [SiteController::class, 'produtos'])->name('SiteController.prod');

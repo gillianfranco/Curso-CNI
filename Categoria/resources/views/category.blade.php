@@ -73,12 +73,12 @@
                 <h1>Registro de Categorias</h1>
                 <div class="campo">
                     <label for="categoria">Categoria</label>
-                    <input type="text" name="categoria" id="categoria" placeholder="Digite o nome da categoria">
+                    <input type="text" name="categoria" id="categoria" placeholder="Digite o nome da nova categoria" required>
                 </div>
 
                 <div class="buttons">
                     <button><a href="{{ route('SiteController.category_view') }}">Voltar</a>
-                    <button type="submit">Registrar</button></button>
+                    <button type="submit" onclick="alert('Categoria criada!')">Criar nova categoria</button></button>
                 </div>
             </div>
         </form>

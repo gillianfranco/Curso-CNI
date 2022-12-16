@@ -60,9 +60,9 @@
         }
 
         button{
-            margin-top: 50px;
+            margin-top: 35px;
             width: 100px;
-            height: 40px;
+            height: 60px;
         }
 
         button a{
@@ -79,12 +79,12 @@
                 <h1>Registro de Produtos</h1>
                 <div class="campo">
                     <label for="produto">Produto</label>
-                    <input type="text" name="produto" id="produto" placeholder="Digite o nome do produto">
+                    <input type="text" name="produto" id="produto" placeholder="Digite o nome do produto" required>
                 </div>
 
                 <div class="campo">
                     <label for="CAT_ID">Categoria</label>
-                    <select name="CAT_ID" id="CAT_ID">
+                    <select name="CAT_ID" id="CAT_ID"  required>
                         <option value="" disabled selected>--- Selecione ---</option>
                         @foreach($categorias as $categoria)
                             <option value="{{ $categoria->id }}">{{ $categoria->categoria }}</option>
@@ -92,8 +92,9 @@
                     </select>
                 </div>
                 <div class="buttons">
-                    <button><a href="{{ route('SiteController.category') }}">Criar novas Categorias</a>
-                    <button type="submit">Registrar</button></button>
+                    <button><a href="{{ route('SiteController.category') }}">Criar novas Categorias</a></button>
+                    <button><a href="{{ route('SiteController.prod_view') }}">Visualizar os produtos de cada categoria</a></button>
+                    <button type="submit" onclick="alert('Produto registrado!')">Registrar</button>
                 </div>
             </div>
         </form>
