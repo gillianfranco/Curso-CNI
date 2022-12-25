@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Categoria extends Model
 {
     use HasFactory;
-    public $filable = ['id', 'categoria'];
+    public $fillable = ['id', 'categoria'];
 }

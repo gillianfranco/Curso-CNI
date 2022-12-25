@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Categoria;
 use App\Models\Produto;
+use Illuminate\Support\Facades\DB;
 
 class SiteController extends Controller
 {
@@ -37,8 +38,9 @@ class SiteController extends Controller
     }
 
     public function produtos(int $id){
-        $produtos = Produto::get();
+        $produtos = DB::select('SELECT * FROM produtos WHERE CAT_ID = :CAT_ID', ['CAT_ID' => $id]);
+        $categoria = Categoria::find($id);
 
-        return view('produtos', ['produtos' => $produtos], ['id' => $id]);
+        return view('produtos', ['produtos' => $produtos], ['categoria' => $categoria]);
     }
 }

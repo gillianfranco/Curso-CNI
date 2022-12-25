@@ -55,19 +55,35 @@
         div.buttons{
             width: 100%;
             display: flex;
-            flex-direction: space;
             justify-content: space-evenly;
         }
 
         button{
+            border: 1px solid #000;
+            border-radius: 4px;
             margin-top: 35px;
+            color: #000;
             width: 100px;
             height: 60px;
+            background-color: #f1f1f1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        button a{
+        a{
+            border: 1px solid #000;
+            border-radius: 4px;
+            margin-top: 35px;
             text-decoration: none;
             color: #000;
+            width: 100px;
+            height: 60px;
+            background-color: #f1f1f1;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
     </style>
@@ -92,9 +108,9 @@
                     </select>
                 </div>
                 <div class="buttons">
-                    <button><a href="{{ route('SiteController.category') }}">Criar novas Categorias</a></button>
-                    <button><a href="{{ route('SiteController.prod_view') }}">Visualizar os produtos de cada categoria</a></button>
-                    <button type="submit" onclick="alert('Produto registrado!')">Registrar</button>
+                    <a href="{{ route('SiteController.category') }}">Criar novas Categorias</a>
+                    <a href="{{ route('SiteController.prod_view') }}">Visualizar os produtos de cada categoria</a>
+                    <button type="submit" style="cursor: pointer;" onclick="alert('Produto registrado!')">Registrar</button>
                 </div>
             </div>
         </form>

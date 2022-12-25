@@ -57,11 +57,29 @@
             margin-top: 30px;
             width: 100px;
             height: 40px;
+            border: 1px solid #000;
+            color: #000;
+            background-color: #f1f1f1;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 4px;
         }
 
-        button a{
+        a{
+            border: 1px solid #000;
+            border-radius: 4px;
+            margin-top: 30px;
             text-decoration: none;
             color: #000;
+            width: 100px;
+            height: 40px;
+            background-color: #f1f1f1;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
     </style>
@@ -77,8 +95,8 @@
                 </div>
 
                 <div class="buttons">
-                    <button><a href="{{ route('SiteController.category_view') }}">Voltar</a>
-                    <button type="submit" onclick="alert('Categoria criada!')">Criar nova categoria</button></button>
+                    <a href="{{ route('SiteController.category_view') }}">Voltar</a>
+                    <button type="submit" style="cursor: pointer;" onclick="alert('Categoria criada!')">Criar nova categoria</button>
                 </div>
             </div>
         </form>
